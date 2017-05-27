@@ -34,8 +34,9 @@ class LoginForm extends Component {
       <Card>
         <CardSection>
           <Input
-            label="Email"
-            placeholder="email@gmail.com"
+            label='Email'
+            placeholder='email@gmail.com'
+            autoCapitalize='none'
             onChangeText={this.onEmailChange.bind(this)}
             value={this.props.email}
           />
@@ -43,8 +44,8 @@ class LoginForm extends Component {
         <CardSection>
           <Input
             secureTextEntry
-            label="Password"
-            placeholder="password"
+            label='Password'
+            placeholder='password'
             onChangeText={this.onPasswordChange.bind(this)}
             value={this.props.password}
           />
