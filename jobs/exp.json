@@ -1,7 +1,7 @@
 {
-  "name": "jobs",
+  "name": "Jobs Finder",
   "description": "An empty new project",
-  "slug": "jobs",
+  "slug": "jobs-finder",
   "privacy": "public",
   "sdkVersion": "17.0.0",
   "version": "1.0.0",
@@ -13,9 +13,16 @@
     "hideExponentText": false
   },
   "packagerOpts": {
-    "assetExts": ["ttf", "mp4"]
+    "assetExts": [
+      "ttf",
+      "mp4"
+    ]
   },
   "ios": {
+    "bundleIdentifier": "com.haaswill.jobsfinder",
     "supportsTablet": true
+  },
+  "android": {
+    "package": "com.haaswill.jobsfinder"
   }
 }
