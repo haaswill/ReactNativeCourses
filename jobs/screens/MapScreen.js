@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { MapView } from 'expo';
 import { connect } from 'react-redux';
-import { Button } from 'react-native-elements';
+import { Button, Icon } from 'react-native-elements';
 import { fetchJobs } from '../actions';
 
 class MapScreen extends Component {
+  static navigationOptions = () => ({
+    title: 'Map',
+    tabBarIcon: ({ tintColor }) => <Icon name='my-location' size={30} color={tintColor} />
+  });
+
   state = {
     //to make map load set region after its loaded
     mapLoaded: false,

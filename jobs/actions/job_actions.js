@@ -2,7 +2,9 @@ import axios from 'axios';
 import reverseGeocode from 'latlng-to-zip';
 import qs from 'qs';
 import {
-  FETCH_JOBS
+  FETCH_JOBS,
+  LIKE_JOB,
+  CLEAR_LIKED_JOBS
 } from './types';
 
 const JOB_ROOT_URL = 'http://api.indeed.com/ads/apisearch?';
@@ -30,4 +32,15 @@ export const fetchJobs = (region, callback) => async dispatch => {
   } catch (e) {
     console.log(e);
   }
+};
+
+export const likeJob = (job) => {
+  return {
+    type: LIKE_JOB,
+    payload: job
+  };
+};
+
+export const clearLikedJobs = () => {
+  return { type: CLEAR_LIKED_JOBS };
 };

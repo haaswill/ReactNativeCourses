@@ -27,7 +27,14 @@ class App extends React.Component {
               settings: { screen: SettingsScreen }
             })
           }
-        })
+        }, {
+            tabBarPosition: 'bottom',
+            // navigate between tabs on android
+            //swipeEnabled: false,
+            tabBarOptions: {
+              labelStyle: { fontSize: 12 }
+            }
+          })
       }
     }, {
         navigationOptions: {
